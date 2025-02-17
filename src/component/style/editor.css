@@ -1,0 +1,9 @@
+.tiptap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "monlam","Poppins", sans-serif;
+}
+.tiptap:focus {
+  outline: none;
+}

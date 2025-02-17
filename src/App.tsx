@@ -8,9 +8,9 @@ function App() {
       <div style={{width:"50%"}}>
     <Editor />
       </div>
-      <div style={{width:"50%"}}>
+      {/* <div style={{width:"50%"}}>
     <Editor/>
-      </div>
+      </div> */}
     </div>
     </>
   )

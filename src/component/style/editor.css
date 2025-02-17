@@ -1,8 +1,12 @@
 .tiptap {
-  min-height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   font-family: "monlam","Poppins", sans-serif;
+  overflow-y: scroll;
+  padding:20px;
+  scrollbar-color: gray white;
+  scrollbar-width: thin;
 }
 .tiptap:focus {
   outline: none;

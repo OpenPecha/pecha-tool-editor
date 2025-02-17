@@ -9,15 +9,18 @@ import {text} from '../data/text';
 
 const extensions = [StarterKit]
 
-const content = text.replace(/\n/g, '<br>');
+const demo_content = text.replace(/\n/g, '<br>');
 
+type EditorWrapperProps = {
+  content?:string
+}
 
-const Tiptap = () => {
+const EditorWrapper = ({content}:EditorWrapperProps) => {
+
   return (
-
     <EditorProvider extensions={extensions}
     autofocus={true}
-    content={content}
+    content={content|| demo_content}
     slotBefore={<ToolbarHeader />}
     slotAfter={<ToolbarFooter />}>
       <FloatingMenuComponent />
@@ -26,4 +29,4 @@ const Tiptap = () => {
   )
 }
 
-export default Tiptap
+export default EditorWrapper

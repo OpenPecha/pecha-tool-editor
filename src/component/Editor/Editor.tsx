@@ -21,8 +21,16 @@ const token = await generateTiptapToken()
 // ydoc and provider for Editor A
 
 
-class EditorWrapper extends React.Component {
-  constructor(props) {
+interface EditorWrapperProps {
+  content: string;
+  title: string;
+  currentUser?: { name: string, color: string };
+}
+
+class EditorWrapper extends React.Component<EditorWrapperProps> {
+  ydocA: Y.Doc
+  providerA: TiptapCollabProvider
+  constructor(props: EditorWrapperProps) {
     super(props);
     
     this.ydocA = new Y.Doc();
@@ -48,6 +56,7 @@ class EditorWrapper extends React.Component {
     );
   }
 }
+
 
 const Editor = ({
   ydoc, provider, room,content,currentUser
